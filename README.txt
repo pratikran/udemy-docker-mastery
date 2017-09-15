@@ -75,7 +75,21 @@ docker run --name mongo -d mongo
 docker top mongo
 docker stop mongo
 docker ps
+ps aux | grep mongod
 docker top mongo
   error
+ps aux | grep mongod
+docker start mongo
+docker top mongo
+ps aux | grep mongod
 
+
+WINDOWS DOCKER CONTAINERS: DOCKER IS NOT JUST LINUX
+  Windows Containers and Docker 101
+    https://www.youtube.com/watch?v=066-9yw8-7c
+  Windows and Linux Parity with Docker
+    https://www.youtube.com/watch?v=4ZY_4OeyJsw
+  Docker + Microsoft - Investing in the Future of your Applications
+    https://www.youtube.com/watch?v=QASAqcuuzgI
+    
 
