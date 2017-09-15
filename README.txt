@@ -44,3 +44,6 @@ Docker Version Format Change in Early 2017
  
 docker version
 docker info
+
+docker <command> <sub-command> <options>
+
