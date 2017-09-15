@@ -41,7 +41,12 @@ SHELL AND TAB COMPLETION
 Docker Version Format Change in Early 2017
   https://blog.docker.com/2017/03/docker-enterprise-edition/
   
- 
+docker-machine env default
+docker-machine ls
+docker-machine start
+docker-machine stop
+docker-machine ip
+
 docker version
 docker info
 
