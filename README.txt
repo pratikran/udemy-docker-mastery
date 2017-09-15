@@ -52,3 +52,5 @@ docker info
 
 docker <command> <sub-command> <options>
 
+docker container run --publish 80:80 nginx
+docker container run --publish 80:80 --detach nginx
