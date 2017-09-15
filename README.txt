@@ -64,6 +64,7 @@ docker container logs webhost
 docker container top webhost
 
 docker container --help
+docs.docker.com
 
 docker container ls -a
 docker container rm <ID[,ID][,ID]...>
@@ -93,6 +94,8 @@ WINDOWS DOCKER CONTAINERS: DOCKER IS NOT JUST LINUX
     https://www.youtube.com/watch?v=QASAqcuuzgI
     
 docker container run --publish 3306:3306 --detach --name mysql --env MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+docker container logs mysql
+
 docker container run --publish 8080:80 --detach --name httpd httpd
 
 docker container stop <ID/name>,<ID/name>...
