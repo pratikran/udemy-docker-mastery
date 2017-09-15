@@ -92,4 +92,5 @@ WINDOWS DOCKER CONTAINERS: DOCKER IS NOT JUST LINUX
   Docker + Microsoft - Investing in the Future of your Applications
     https://www.youtube.com/watch?v=QASAqcuuzgI
     
-
+docker container run --publish 3306:3306 --detach --name mysql --env MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+docker container run --publish 8080:80 --detach --name httpd httpd
