@@ -65,3 +65,9 @@ docker container top webhost
 
 docker container --help
 
+docker container ls -a
+docker container rm <ID[,ID][,ID]...>
+docker container ls -a
+docker container rm -f <ID>
+docker container ls -a
+
