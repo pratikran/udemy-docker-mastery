@@ -11,5 +11,13 @@ Installing on Mac
     https://www.docker.com/products/docker-toolbox
 Installing on Linux
   apt/yum install docker.io
-
-
+    
+  add their repository and install all dependencies: 
+    curl -sSL https://get.docker.com/ | sh
+  manual method by following specific instructions on the Docker Store for your distribution
+    https://store.docker.com/editions/community/docker-ce-server-ubuntu
+  
+IF NOTHING WORKS
+  http://play-with-docker.com/
+    run one or more Docker instances inside your browser, and give you a terminal to use it with
+    
