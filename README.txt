@@ -121,3 +121,8 @@ docker top db
 docker top proxy
 
 docker container inspect db
+docker container stats --help
+docker container stats
+docker container stats db
+docker container stats proxy
+
