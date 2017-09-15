@@ -94,7 +94,7 @@ WINDOWS DOCKER CONTAINERS: DOCKER IS NOT JUST LINUX
     https://www.youtube.com/watch?v=QASAqcuuzgI
     
 docker container run --publish 3306:3306 --detach --name db --env MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
-    (docker container run -p 3306:3306 -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql)
+    (docker container run -p 3306:3306 -d --name db -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql)
 docker container logs mysql
 
 docker container run --publish 8080:80 --detach --name webserver httpd
@@ -102,7 +102,22 @@ docker container run --publish 8080:80 --detach --name webserver httpd
 docker container run --publish 80:80 --detach --name proxy nginx
     (docker container run -p 80:80 -d --name proxy nginx)
 
+docker container ls -a
+docker ps -a
+
 docker container stop <ID/name>,<ID/name>...
 docker container rm <ID/name>,<ID/name>...
 
 docker container ls -a
+docker ps -a
+
+docker container run -d --name proxy nginx
+docker container run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+
+docker container top db
+docker container top proxy
+
+docker top db
+docker top proxy
+
+docker container inspect db
