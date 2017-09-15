@@ -71,3 +71,11 @@ docker container ls -a
 docker container rm -f <ID>
 docker container ls -a
 
+docker run --name mongo -d mongo
+docker top mongo
+docker stop mongo
+docker ps
+docker top mongo
+  error
+
+
