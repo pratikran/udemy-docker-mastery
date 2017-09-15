@@ -38,3 +38,7 @@ SHELL AND TAB COMPLETION
   MAC
     http://www.bretfisher.com/shell
 
+Docker Version Format Change in Early 2017
+  https://blog.docker.com/2017/03/docker-enterprise-edition/
+  
+ 
