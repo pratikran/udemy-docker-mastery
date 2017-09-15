@@ -131,10 +131,22 @@ docker container stats db
 docker container stats proxy
 docker container ls -a
 
+docker container run --name ubuntu ubuntu
+
 docker container run --help
 docker container run -it --name proxy-it nginx bash
     $# exit
 docker container start -ai proxy-it
+
+docker container exec -it db bash
+
+docker pull alpine
+docker image
+docker container run -it alpine bash
+    ERROR: bash: executable file not find in $PATH
+docker container run -it alpine sh
+    $# apk add bash
+
 
 
 
