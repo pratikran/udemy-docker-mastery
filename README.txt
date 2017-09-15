@@ -94,3 +94,7 @@ WINDOWS DOCKER CONTAINERS: DOCKER IS NOT JUST LINUX
     
 docker container run --publish 3306:3306 --detach --name mysql --env MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
 docker container run --publish 8080:80 --detach --name httpd httpd
+
+docker container stop <ID/name>,<ID/name>...
+docker container rm <ID/name>,<ID/name>...
+
