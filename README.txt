@@ -21,3 +21,5 @@ IF NOTHING WORKS
   http://play-with-docker.com/
     run one or more Docker instances inside your browser, and give you a terminal to use it with
     
+https://github.com/docker/compose/releases
+https://github.com/docker/machine/releases
