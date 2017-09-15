@@ -42,3 +42,5 @@ Docker Version Format Change in Early 2017
   https://blog.docker.com/2017/03/docker-enterprise-edition/
   
  
+docker version
+docker info
