@@ -60,3 +60,5 @@ docker container stop <ID>
 docker container ls
 docker container ls -a
 docker container run --publish 80:80 --detach --name webhost nginx
+docker container logs webhost
+docker container top webhost
