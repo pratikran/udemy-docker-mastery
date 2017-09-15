@@ -42,6 +42,10 @@ Docker Version Format Change in Early 2017
   https://blog.docker.com/2017/03/docker-enterprise-edition/
   
 docker-machine env default
+    @FOR /f "tokens=*" %i IN ('docker-machine env default') DO @%i
+    OR
+    eval $("C:\Program Files\Docker Toolbox\docker-machine.exe" env default)
+
 docker-machine ls
 docker-machine start
 docker-machine stop
@@ -125,4 +129,12 @@ docker container stats --help
 docker container stats
 docker container stats db
 docker container stats proxy
+docker container ls -a
+
+docker container run --help
+docker container run -it --name proxy-it nginx bash
+    $# exit
+docker container start -ai proxy-it
+
+
 
