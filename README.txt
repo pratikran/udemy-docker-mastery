@@ -21,5 +21,20 @@ IF NOTHING WORKS
   http://play-with-docker.com/
     run one or more Docker instances inside your browser, and give you a terminal to use it with
     
+get.docker.com
 https://github.com/docker/compose/releases
 https://github.com/docker/machine/releases
+
+SHELL AND TAB COMPLETION 
+  WINDOWS SHELL/TERM
+    http://cmder.net/
+    https://conemu.github.io/
+  WINDOWS POWERSHELL TAB COMPLETION
+    https://docs.docker.com/docker-for-windows/#set-up-tab-completion-in-powershell
+  MAC SHELL/TERM
+    https://www.iterm2.com/
+  MAC TAB COMPLETION
+    http://blog.alexellis.io/docker-mac-bash-completion/
+  MAC
+    http://www.bretfisher.com/shell
+
