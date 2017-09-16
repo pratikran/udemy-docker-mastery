@@ -394,6 +394,7 @@ docker container run -d --name nginx -p 80:80 -v $(pwd):/usr/share/nginx/html ng
 docker container run -d --name nginx2 -p 8080:80 nginx
   http://192.168.99.100
 
+
 ASSIGNMENT: Database Upgrades with Named Volumes
 
 hub.docker.com
@@ -408,6 +409,12 @@ docker container stop psql
 docker container run -d --name psql2 -v psql:/var/lib/postgresql/data postgres:9.6.2
 docker container logs -f psql2
 
+
+ASSIGNMENT: Edit Code Running in Containers with BIND MOUNTS
+
+Jekyll, a Static Site Generator (just as background info, no need to install)
+    https://jekyllrb.com/
+    
 
 
 
