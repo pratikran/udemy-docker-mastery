@@ -328,7 +328,44 @@ docker image ls
 docker container run --rm -p 80:3000 testnode 
 docker tag testnode pratikran/testing-node
 docker push pratikran/testing-node
+docker rmi testnode
+docker container run --rm -p 80:3000 pratikran/testing-node
 
 
+DOCKER CONTAINER LIFETIME AND PERSISTENT DATA
+  
+  VOLUMES
+  BIND MOUNTS
+  
+  Dockerfile
+  
+  hub.docker.com
+    mysql
+      Dockerfile
+    
+VOLUMES
+docker pull mysql
+docker image inspect mysql
 
+docker container run -d --name mysql -e MYSQL_ALLOW_AMPTY_PASSWORD=True mysql
+docker ps -a
+docker container inspect mysql
+  mounts
+docker volume ls
+docker container run -d --name mysql2 -e MYSQL_ALLOW_AMPTY_PASSWORD=True mysql
 
+docker container stop mysql mysql2
+docker container ls
+docker container ls -a
+docker container rm mysql mysql2
+docker volume ls
+
+docker container run -d --name mysql -e MYSQL_ALLOW_AMPTY_PASSWORD=True -v /var/lib/mysql mysql
+docker container run -d --name mysql -e MYSQL_ALLOW_AMPTY_PASSWORD=True -v mysql-db:/var/lib/mysql mysql
+
+docker volume ls
+docker container inspect mysql
+
+docker voulme create --help
+
+BIND MOUNTS
