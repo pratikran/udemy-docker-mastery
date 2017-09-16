@@ -260,3 +260,24 @@ docker image layers
 docker image inspect nginx
   show metadata 
 
+DOCKER IMAGE TAGGING AND PUSH TO DOCKER HUB
+
+docker image tag --help
+docker image ls
+docker pull mysql/mysql-server
+docker pull bretfisher/nodemongoapp
+docker pull nginx:mainline
+docker image tag nginx bretfisher/nginx
+docker image tag nginx pratikran/nginx
+docker image push pratikran/nginx
+
+login/logout to hub.docker.com
+
+docker login
+docker logout
+
+docker image push pratikran/nginx
+docker image tag pratikran/nginx pratikran/nginx:testing
+docker image push pratikran/nginx
+docker image ls
+
