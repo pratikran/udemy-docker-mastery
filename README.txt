@@ -477,6 +477,48 @@ docker-compose down
 
 ASSIGNMENT: DOCKER-COMPOSE YAML for Multi-Container Service
 
+cd ../compose-assignment-2
+docker pull drupal
+docker image inspect drupal
+    ContainerConfig
+            ExposedPorts
+                80/tcp
+vim docker-compose.yml
+
+docker-compose up
+ERROR: Named volume "drupal-modules:/var/www/html/modules:rw" is used in service "drupal" but no declaration was found in the volumes section.
+
+SOLUTION: Add separate volumes section with named volumes names copied from drupal service volumes 
+
+hub.docker.com
+  read postgres documentation how db works
+  similarly for other services
+  
+http://192.168.99.100:8080
+  follow drupal install instruction
+  
+docker-compose down -v
+  to remove volumes use -v
+
+
+ADDING IMAGE BUILDING TO COMPOSE FILES
+
+cd ../compose-sample-3
+cat docker-compose.yml
+
+docker-compose up
+  WARNING: Image for service proxy was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`
+  
+http://192.168.99.100/
+  
+Bind Mount
+  edit 
+    index.html
+  http://192.168.99.100/
+  
+docker-compose down --rmi local
+
+
 
 
 
