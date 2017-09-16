@@ -253,6 +253,7 @@ docker image layers
   local cache
    upload/download only image layers not in cache
    same layers are stored only once across all images
+   each layer has a sha hash
   containers
     copy on write
  
