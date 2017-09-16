@@ -414,7 +414,13 @@ ASSIGNMENT: Edit Code Running in Containers with BIND MOUNTS
 
 Jekyll, a Static Site Generator (just as background info, no need to install)
     https://jekyllrb.com/
-    
+
+docker run -p 80:4000 -v $(pwd):/site bretfisher/jekyll-serve
+  (some ERRORs, try later)
+  
+
+DOCKER COMPOSE
+
 
 
 
