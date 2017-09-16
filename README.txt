@@ -506,6 +506,8 @@ ADDING IMAGE BUILDING TO COMPOSE FILES
 cd ../compose-sample-3
 cat docker-compose.yml
 
+  if image tag is not used docker-compose will create a unique name based on directory and servicename
+
 docker-compose up
   WARNING: Image for service proxy was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`
   
