@@ -159,6 +159,7 @@ Docker Networks: Concepts for Private and Public Comms in Containers
       
 docker container run -p 80:80 --name webhost -d nginx
 docker container port webhost
+  172.17.0.2
 
 docker container inspect --format '{{ .NetworkSettings.IPAddress }}' webhost
 
@@ -175,5 +176,27 @@ FIXME: Change In Official Nginx Image Removes Ping
   There are other ways to solve this, including adding the ping util with apt-get, making your own image, etc.
     https://www.udemy.com/docker-mastery/learn/v4/questions/2487292
   
+DOCKER NETWORKS
+Docker Networks: CLI Management of Virtual Networks
+
+docker network ls
+  bridge, host, none
+docker network inspect bridge
+docker network create my_net_app
+docker network create --help
+
+docker container run --name new_nginx --network my_net_app -d nginx:alpine
+docker network inspect my_net_app
+
+docker network --help
+docker ps -a
+docker network ls -a
+
+docker network connect 411d5fc6ed90 ca30b4195cc7
+docker container inspect webhost
+  172.17.0.2
+  172.18.0.3
   
+
+
 
