@@ -420,6 +420,7 @@ docker run -p 80:4000 -v $(pwd):/site bretfisher/jekyll-serve
   
 
 DOCKER COMPOSE
+  initially called fig
 docker-compose.yml
 
 YAML
@@ -429,7 +430,50 @@ COMPOSE
   https://docs.docker.com/compose/compose-file/compose-versioning/
   https://github.com/docker/compose/releases
 
+CLI
+  docker-compose
+  Not for production grade 
+  Good for local dev and test
 
+Basic Compose Commands
+  Download via Github for Linux
+    https://github.com/docker/compose/releases
+  
+docker-compose up
+docker-compose down
+
+docker-compose -f <yaml filename> up
+
+docker-compose up -d
+  background run
+
+cd ../compose-sample-2
+
+docker-compose up
+  logs are dumped on STDOUT by default
+  
+  ERROR:
+  Windows 10 Home 64bit, Docker ToolBox, docker version 17.07.0-ce, docker-compose 1.15.0
+  
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+ERROR: for proxy  Cannot start service proxy: oci runtime error: container_linux.go:262: starting container process caused "process_linux.go:339: container init caused \"rootfs_linux.go:57: mounting \\\"/f/Code/devops/udemy-bretfisher/udemy-docker-mastery/compose-sample-2/nginx.conf\\\" to rootfs \\\"/mnt/sda1/var/lib/docker/aufs/mnt/6968110f68ebe6c67a726549f6b76286821b1e4a6825c5a318ccfd7048d006e9\\\" at \\\"/mnt/sda1/var/lib/docker/aufs/mnt/6968110f68ebe6c67a726549f6b76286821b1e4a6825c5a318ccfd7048d006e9/etc/nginx/conf.d/default.conf\\\" caused \\\"not a directory\\\"\""
+    : Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected  type
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+SOLUTION:
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+https://github.com/moby/moby/issues/23992
+https://github.com/docker/compose/issues/2268
+
+Shared the new drive in VirtualBox, docker-compose.yml - volumes map done for folder instead of files
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+docker-compose logs
+docker-compose ps
+docker-compose top
+docker-compose down
+
+ASSIGNMENT: DOCKER-COMPOSE YAML for Multi-Container Service
 
 
 
