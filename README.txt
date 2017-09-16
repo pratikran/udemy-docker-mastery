@@ -207,6 +207,10 @@ docker container exec -it my_nginx ping new_nginx
 docker container exec -it new_nginx ping my_nginx
 
 docker network ls
+docker container create --help
+  --link option 
+
+CURL ASSIGNMENT
 
 
 
