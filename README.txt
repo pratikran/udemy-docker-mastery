@@ -150,13 +150,17 @@ docker container run -it alpine sh
 PACKAGE MANAGEMENT
   https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg
   
-  
+DOCKER NETWORKS: CONCEPTS  
 Docker Networks: Concepts for Private and Public Comms in Containers
   
   Docker's --format option for filtering cli output
       https://docs.docker.com/engine/admin/formatting/
       
       
-  
+docker container run -p 80:80 --name webhost -d nginx
+docker container port webhost
+
+docker container inspect --format '{{ .NetworkSettings.IPAddress }}' webhost
+
 
 
