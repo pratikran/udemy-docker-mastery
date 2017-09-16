@@ -147,6 +147,8 @@ docker container run -it alpine bash
 docker container run -it alpine sh
     $# apk add bash
 
-
+PACKAGE MANAGEMENT
+  https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg
+  
 
 
