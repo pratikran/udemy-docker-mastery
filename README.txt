@@ -150,5 +150,13 @@ docker container run -it alpine sh
 PACKAGE MANAGEMENT
   https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg
   
+  
+Docker Networks: Concepts for Private and Public Comms in Containers
+  
+  Docker's --format option for filtering cli output
+      https://docs.docker.com/engine/admin/formatting/
+      
+      
+  
 
 
