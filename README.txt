@@ -196,7 +196,17 @@ docker network connect 411d5fc6ed90 ca30b4195cc7
 docker container inspect webhost
   172.17.0.2
   172.18.0.3
+docker network disconnect 411d5fc6ed90 ca30b4195cc7  
   
+Docker Networks: DNS and How Containers Find Each Other
+  
+  DNS NAMING
+docker network inspect my_net_app
+docker container run --name my_nginx --network my_net_app -d nginx:alpine
+docker container exec -it my_nginx ping new_nginx
+docker container exec -it new_nginx ping my_nginx
+
+docker network ls
 
 
 
