@@ -301,3 +301,34 @@ EDIT Dockerfile
 docker image build -t custom_nginx .
 docker image ls
 
+EXTENDING OFFICIAL IMAGES
+
+cd ../dockerfile-sample-2
+docker container run -p 80:80 --rm nginx
+
+DOCKERFILE
+
+  FROM
+  WORKDIR
+  COPY
+  
+docker image build -t nginx-with-html .
+docker container run -p 80:80 --rm nginx-with-html
+
+docker image ls
+docker image tag nginx-with-html:latest pratikran/nginx-with-html:latest
+docker image ls
+
+ASSIGNMENT: BUILD YOUR OWN IMAGE
+
+cd ../dockerfile-assignment-1
+vim Dockerfile
+docker build -t testnode .
+docker image ls
+docker container run --rm -p 80:3000 testnode 
+docker tag testnode pratikran/testing-node
+docker push pratikran/testing-node
+
+
+
+
