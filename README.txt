@@ -420,6 +420,14 @@ docker run -p 80:4000 -v $(pwd):/site bretfisher/jekyll-serve
   
 
 DOCKER COMPOSE
+docker-compose.yml
+
+YAML
+  http://www.yaml.org/start.html
+  http://www.yaml.org/refcard.html
+COMPOSE
+  https://docs.docker.com/compose/compose-file/compose-versioning/
+  https://github.com/docker/compose/releases
 
 
 
