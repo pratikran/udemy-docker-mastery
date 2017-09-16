@@ -248,3 +248,14 @@ docker images
 docker image ls
 docker history nginx:latest
 docker history mysql
+
+docker image layers 
+  local cache
+   upload/download only image layers not in cache
+   same layers are stored only once across all images
+  containers
+    copy on write
+ 
+docker image inspect nginx
+  show metadata 
+
