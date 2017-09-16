@@ -520,6 +520,9 @@ Bind Mount
   
 docker-compose down --rmi local
 
+ASSIGNMENT: COMPOSE BUILD AND RUN 
+  drupal image build and run
+    
 
 
 
