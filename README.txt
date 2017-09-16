@@ -344,6 +344,8 @@ DOCKER CONTAINER LIFETIME AND PERSISTENT DATA
       Dockerfile
     
 VOLUMES
+  created at container runtime, in Dockerfile, in cmdline beforehand
+
 docker pull mysql
 docker image inspect mysql
 
@@ -369,3 +371,18 @@ docker container inspect mysql
 docker voulme create --help
 
 BIND MOUNTS
+  created at container runtime only
+  
+cd ../dockerfile-sample-2
+cat Dockerfile
+
+docker container run -d --name nginx -p 80:80 -v $(pwd):/usr/share/nginx/html nginx
+  http://192.168.99.100
+  edit index.html
+  http://192.168.99.100
+docker container run -d --name nginx2 -p 8080:80 nginx
+  http://192.168.99.100
+
+ASSIGNMENT: 
+
+
