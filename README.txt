@@ -231,3 +231,13 @@ docker container run --rm --net dude alpine nslookup search
 docker container run --rm --net dude centos curl -s search:9200 
 
 
+hub.docker.com
+docker pull nginx
+docker pull nginx:1.11.9
+Official Docker Image Specification
+  https://github.com/moby/moby/blob/master/image/spec/v1.md
+List of Official Docker Images
+  https://github.com/docker-library/official-images/tree/master/library
+Images and Containers From Docker Docs
+   https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/
+   
