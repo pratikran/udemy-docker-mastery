@@ -211,6 +211,15 @@ docker container create --help
   --link option 
 
 CURL ASSIGNMENT
+docker container run --rm -it centos:7 bash
+  yum update curl
+  exit
+docker container run --rm -it ubuntu:14.04 bash
+  apt-get update && at-get install -y curl
+  exit
+docker ps -a
 
+
+ASSIGNMENT: DNS Round Robin Test
 
 
