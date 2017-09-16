@@ -241,3 +241,10 @@ List of Official Docker Images
 Images and Containers From Docker Docs
    https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/
    
+DOCKER IMAGES
+  union filesystem
+  
+docker images
+docker image ls
+docker history nginx:latest
+docker history mysql
