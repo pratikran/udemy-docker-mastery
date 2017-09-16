@@ -289,5 +289,15 @@ DOCKERFILE BASICS
   EXPOSE
   CMD
 
-
+git clone https://github.com/pratikran/udemy-docker-mastery
+cd udemy-docker-mastery
+cd dockerfile-sample-1
+docker image build -t custom_nginx .
+  on hub.docker.com
+    docker image build -t pratikran/custom_nginx .
+docker image ls
+EDIT Dockerfile 
+  EXPOSE 80 443 8080
+docker image build -t custom_nginx .
+docker image ls
 
