@@ -162,5 +162,18 @@ docker container port webhost
 
 docker container inspect --format '{{ .NetworkSettings.IPAddress }}' webhost
 
-
+FIXME: Change In Official Nginx Image Removes Ping
+  
+  A recent June 2017 change in the official nginx image removes ping
+      https://hub.docker.com/_/nginx (nginx  or nginx:latest) 
+  
+  Inplace of
+  docker container run <stuff> nginx
+  Do this
+  docker container run <stuff> nginx:alpine
+  
+  There are other ways to solve this, including adding the ping util with apt-get, making your own image, etc.
+    https://www.udemy.com/docker-mastery/learn/v4/questions/2487292
+  
+  
 
