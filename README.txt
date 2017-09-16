@@ -281,3 +281,13 @@ docker image tag pratikran/nginx pratikran/nginx:testing
 docker image push pratikran/nginx
 docker image ls
 
+BUILDING IMAGES
+DOCKERFILE BASICS
+  FROM
+  ENV
+  RUN
+  EXPOSE
+  CMD
+
+
+
