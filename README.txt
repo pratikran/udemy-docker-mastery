@@ -333,6 +333,17 @@ docker container run --rm -p 80:3000 pratikran/testing-node
 
 
 DOCKER CONTAINER LIFETIME AND PERSISTENT DATA
+
+  An introduction to immutable infrastructure
+    https://www.oreilly.com/ideas/an-introduction-to-immutable-infrastructure
+    
+  The twelve-factor app
+    https://12factor.net/
+  
+  12 Fractured Apps
+    12 Factor on Containers
+      https://medium.com/@kelseyhightower/12-fractured-apps-1080c73d481c
+      
   
   VOLUMES
   BIND MOUNTS
@@ -383,6 +394,7 @@ docker container run -d --name nginx -p 80:80 -v $(pwd):/usr/share/nginx/html ng
 docker container run -d --name nginx2 -p 8080:80 nginx
   http://192.168.99.100
 
-ASSIGNMENT: 
+ASSIGNMENT: Database Upgrades with Named Volumes
+
 
 
