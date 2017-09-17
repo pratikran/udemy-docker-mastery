@@ -724,6 +724,7 @@ SCALING OUT WIHT ROUTING MESH
     stateless load balancing
     L3(tcp) LB, not L4(DNS) LB
       Nginx or HAProxy or AWS ELB etc
+      Docker EE - built in L4 LB
       some useful links
           http://collabnix.com/docker-17-06-swarm-mode-now-with-macvlan-support/
 
