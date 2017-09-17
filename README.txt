@@ -705,7 +705,30 @@ SWARM: SCALING OUT WITH OVERLAY NETWORKING
       http://IP_DEFAULT:8080
       http://IP_NODE1:8080
       http://IP_NODE2:8080
-      
+  on all node
+    docker ps -a
+
+
 SCALING OUT WIHT ROUTING MESH
+  use swarm mode routing mesh
+      https://docs.docker.com/engine/swarm/ingress/
+      
+  uses IPVS in Linux kernel 
+  
+  Load Balancing across Tasks
+    container-to-container (overlay network)
+    published ports open on all nodes
+      external traffic incoming to all node is listened to
+    each node has a load balancer
+      routing to local and external nodes
+    stateless load balancing
+    L3(tcp) LB, not L4(DNS) LB
+      Nginx or HAProxy or AWS ELB etc
+      some useful links
+          http://collabnix.com/docker-17-06-swarm-mode-now-with-macvlan-support/
+
+docker service create --name search --replicas 3 -p 9200:9200 elasticsearch:2
+docker service ps search
+curl localhost:9200
   
   
