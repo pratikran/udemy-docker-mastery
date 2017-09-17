@@ -539,5 +539,18 @@ docker-compose up
 
 SWARM
 
+docker swarm deep dive 
+  https://www.youtube.com/watch?v=dooPhkXT9yI
+  https://www.youtube.com/watch?v=_F6PSP-qhdA
+  
+Heart of Swarmkit: Topology Management
+  https://speakerdeck.com/aluzzardi/heart-of-the-swarmkit-topology-management
+  https://www.youtube.com/watch?v=EmePhjGnCXY
+  
+Raft consensus visualization(swarm db, how it stays in sync across nodes)
+  http://thesecretlivesofdata.com/raft/
+  
+
+
 
 
