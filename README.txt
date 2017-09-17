@@ -537,8 +537,13 @@ docker-compose up
   data used from persistent volumes
   
 
-SWARM
-
+SWARM MODE: BUILT IN ORCHESTRATION
+  Clustering Solution built in with docker
+  swarm classic in version <1.12 was different.
+  Added in 1.12 (summer 2016) via swarmkit toolkit.
+  Not enabled by default, needs to be enabled.
+  
+  
 docker swarm deep dive 
   https://www.youtube.com/watch?v=dooPhkXT9yI
   https://www.youtube.com/watch?v=_F6PSP-qhdA
@@ -549,6 +554,11 @@ Heart of Swarmkit: Topology Management
   
 Raft consensus visualization(swarm db, how it stays in sync across nodes)
   http://thesecretlivesofdata.com/raft/
+  
+CREATE FIRST SERVICE , SCALE LOCALLY
+  deploy services to a swarm
+    https://docs.docker.com/engine/swarm/services/
+    
   
 
 
