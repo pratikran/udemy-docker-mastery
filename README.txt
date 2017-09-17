@@ -767,3 +767,8 @@ for this do all nodes - default,node1,node2
   sudo cat /etc/docker/daemon.json
 
 docker service logs result
+docker service ps result
+
+http://192.168.99.100
+http://192.168.99.100:5001
+
