@@ -522,7 +522,20 @@ docker-compose down --rmi local
 
 ASSIGNMENT: COMPOSE BUILD AND RUN 
   drupal image build and run
-    
+
+cd ../compose-assignment-2
+  EDIT
+    Dockerfile
+    docker-compose.yml
+docker-compose up
+  configure drupal
+    http://192.168.99.100:8080
+  
+docker-compose down
+  volumes preserved
+docker-compose up
+  data used from persistent volumes
+  
 
 
 
