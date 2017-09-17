@@ -611,3 +611,18 @@ docker service ls
 docker container ls
 docker container ls
 
+SWARM MULTI-NODE
+  OPTIONS
+    IN BROWSER
+      play-with-docker.com
+    DOCKER-MACHINE + VITUALBOX
+      free, local run, needs machine with 8Gb RAM
+    DIGITAL OCEAN+DOCKER INSTALL
+      per month charge, can use referral code to get $10 free
+    ROLL YOUR OWN
+      docker-machine
+        on local, AWS< GCC, DO, AZURE
+         meant for dev/test not production
+      get.docker.com
+        install docker anywhere
+    
