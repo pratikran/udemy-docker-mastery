@@ -772,3 +772,76 @@ docker service ps result
 http://192.168.99.100
 http://192.168.99.100:5001
 
+docker service rm redis result db worker vote
+docker service ps redis result db worker vote
+docker service ls
+docker ps -a
+
+
+
+SWARM STACKS and PRODUCTION GRADE COMPOSE
+  SWARM STACKS
+    added docker >1.13
+    COMPOSE files for SERVICES, NETWORKS, VOLUMES
+    COMMAND
+      docker stack deploy
+      VS
+      docker service create
+    deploy:
+    no build:
+    docker-compose 
+        ignores deploy:
+    swarm 
+        ignores build:
+    docker-compose cli not needed on swarm 
+    not everything needed to be in stacked file
+    
+STACK
+  YAML
+    SERVICES
+    VOLUMES
+    OVERLAY NETWORKS
+    SECRETS
+    
+    is a COMPOSE file
+      version >= 3
+      
+  cd ../swarm-stack-1
+  cat example-voting-app-stack.yml
+  
+  docker stack deploy -c example-voting-app-stack.yml voteapp
+  
+  docker stack --help
+  docker stack ls
+  docker stack ps voteapp
+  docker stack services voteapp
+  docker container ls
+  docker network ls
+  
+  result
+    http://192.168.99.100:5001/
+  visualizer
+    http://192.168.99.100:8080/
+  vote
+    http://192.168.99.100:5000/
+  
+  vim example-voting-app-stack.yml
+    vote:
+      replicas: 5
+  docker stack deploy -c example-voting-app-stack.yml voteapp
+  
+  result
+    http://192.168.99.100:5001/
+  visualizer
+    http://192.168.99.100:8080/
+  vote
+    http://192.168.99.100:5000/
+    
+  docker stack ps voteapp
+  docker stack services voteapp
+  docker ps -a
+  
+  
+
+   
+    
