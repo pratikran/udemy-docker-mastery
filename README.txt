@@ -682,5 +682,30 @@ docker service create --replicas 3 alpine ping 8.8.8.8
 docker service ls
 docker node ps
 docker service ps gracious_mclean
+docker service rm gracious_mclean
 
 
+SWARM: SCALING OUT WITH OVERLAY NETWORKING
+  --drive overlay
+  container-to-container networking in single swarm
+  IPSec(AES) encryption
+  each service with multiple networks
+  
+  docker network create --driver overlay my_drupal
+  docker network ls
+  docker service create --name psql --network my_drupal  -e POSTGRES_PASSWORD=password postgres
+  docker service ls
+  docker service ps psql
+  
+  docker container logs psql.1....
+  docker service create --name drupal --network my_drupal -p 8080:80 drupal
+  docker service ls
+  watch docker service ls
+  docker service ps drupal
+      http://IP_DEFAULT:8080
+      http://IP_NODE1:8080
+      http://IP_NODE2:8080
+      
+SCALING OUT WIHT ROUTING MESH
+  
+  
