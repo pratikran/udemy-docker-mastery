@@ -567,7 +567,8 @@ docker swarm init
       """"""""""""""""""""""
       Error response from daemon: could not choose an IP address to advertise since this system has multiple addresses on different interfaces (10.0.2.15 on eth0 and 192.168.99.100 on eth1) - specify one with --advertise-addr
       """"""""""""""""""""""
-      
+
+docker-machine ip      
 docker swarm init --advertise-addr 192.168.99.100
 
       """"""""""""""""""""""
@@ -580,4 +581,7 @@ docker swarm init --advertise-addr 192.168.99.100
       To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
       """"""""""""""""""""""
 
+docker swarm init
+docker-machine ip 
+docker swarm init --advertise-addr 192.168.99.100
 
