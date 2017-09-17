@@ -753,8 +753,10 @@ docker service ps db
 docker service ps worker
 docker service ps vote
 
-
-useful to know docker Configuration file
+docker service logs result
+    this is experimental but enabled by default in >= docker 17.05.0-ce
+    
+to enable experimental features, useful to know docker Configuration file
 /etc/docker/daemon.json
   {"experimental":"true"}
   
