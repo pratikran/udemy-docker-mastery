@@ -612,6 +612,19 @@ docker container ls
 docker container ls
 
 SWARM MULTI-NODE
+
+  CREATE 3-NODE SWARM CLUSTER
+  
+  Digital Ocean Coupon for $10
+        https://www.digitalocean.com/?refcode=b813dfcad8d4&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=CopyPaste
+  Create and Upload a SSH Key to Digital Ocean
+        https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets
+  Docker Swarm Firewall Ports
+        http://www.bretfisher.com/docker-swarm-firewall-ports/
+  Configure SSH for Saving Options for Specific Connections
+        https://www.digitalocean.com/community/tutorials/how-to-configure-custom-connection-options-for-your-ssh-client
+  
+  
   OPTIONS
     IN BROWSER
       play-with-docker.com
@@ -626,3 +639,16 @@ SWARM MULTI-NODE
       get.docker.com
         install docker anywhere
     
+play-with-docker.com
+  (docker within docker container)
+  node 1
+    docker info
+    ping node2
+  node 2
+  node 3
+  
+docker-machine+VIrtualBox
+  >0.10.0
+  
+  docker-machine create node1
+  
