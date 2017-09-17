@@ -559,8 +559,25 @@ CREATE FIRST SERVICE , SCALE LOCALLY
   deploy services to a swarm
     https://docs.docker.com/engine/swarm/services/
     
-  
+check swarm enabled
+docker info
 
+initialize
+docker swarm init
+      """"""""""""""""""""""
+      Error response from daemon: could not choose an IP address to advertise since this system has multiple addresses on different interfaces (10.0.2.15 on eth0 and 192.168.99.100 on eth1) - specify one with --advertise-addr
+      """"""""""""""""""""""
+      
+docker swarm init --advertise-addr 192.168.99.100
 
+      """"""""""""""""""""""
+      Swarm initialized: current node (3actciwj7uezg107q2af829it) is now a manager.
+
+      To add a worker to this swarm, run the following command:
+
+      docker swarm join --token SWMTKN-1-3li4vru26e5v6wzhzyjz9a1l8z58bs3dnkdejwpcl9hj7kl1h3-0cybt1a7o5nj7vb97sqehzbo0 192.168.99.100:2377
+
+      To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+      """"""""""""""""""""""
 
 
