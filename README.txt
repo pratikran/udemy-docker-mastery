@@ -585,3 +585,29 @@ docker swarm init
 docker-machine ip 
 docker swarm init --advertise-addr 192.168.99.100
 
+SINGLE NODE SWARM
+docker node ls
+    there is only one leader
+docker node --help
+docker swarm --help
+docker service --help
+docker service create alpine ping 8.8.8.8
+docker service ls
+docker service ps <NAME{eg:nifty_goldberg here from above}>
+docker container ls
+docker service update <SERVICE{eg:k2hmzypcebg8 here from docker service ls}> --replicas 3
+docker service ls
+docker service ps <NAME{eg:nifty_goldberg here from above}>
+docker update --help
+  for container runtime to update configurations
+    this may require restart
+docker service update --help
+    this will be done without any restart for the swarm or automatic retarts within, very transparently
+docker container ls
+docker service ls
+docker service ps nifty_goldberg
+docker service rm nifty_goldberg
+docker service ls
+docker container ls
+docker container ls
+
