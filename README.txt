@@ -733,3 +733,35 @@ docker service ps search
 curl localhost:9200
   
   
+ASSIGNMENT: SWARM CREATE MULTI-SERVICE APP
+  cd ../swarm-app-1
+  
+docker network create --driver overlay backend
+docker network create --driver overlay frontend
+
+vote
+docker service create --name vote -p 80:80 --replicas 2 --network frontend dockersamples/examplevotingapp_vote:before
+docker service create --name redis --replicas 2 --network frontend redis:3.2
+docker service create --name worker --network frontend --network backend dockersamples/examplevotingapp_worker
+docker service create --name db --network backend --mount type=volume,source=db-data,target=/var/lib/postgresql/data postgres:9.4
+docker service create --name result -p 5001:80 --replicas 2 --network backend dockersamples/examplevotingapp_result:before
+
+docker service ls
+docker service ps redis
+docker service ps result
+docker service ps db
+docker service ps worker
+docker service ps vote
+
+
+useful to know docker Configuration file
+/etc/docker/daemon.json
+  {"experimental":"true"}
+  
+for this do all nodes - default,node1,node2
+  docker-machine ssh <node-name>
+  sudo ls -la /etc/docker/daemon.json
+  sudo sh -c 'echo {\"experimental\":\"true\"} >> /etc/docker/daemon.json'
+  sudo cat /etc/docker/daemon.json
+
+docker service logs result
