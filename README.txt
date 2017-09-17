@@ -651,4 +651,36 @@ docker-machine+VIrtualBox
   >0.10.0
   
   docker-machine create node1
+  docker-machine env node1
+  docker info
+    Name
+    
+Digital Ocean
   
+docker-machine
+  docker-machine create node1
+  docker-machine create node2
+  
+  on default node
+docker swarm init --advertise-addr 192.168.99.100
+docker swarm join-token manager
+  
+  on node1
+  docker swarm join --token SWMTKN-1-3li4vru26e5v6wzhzyjz9a1l8z58bs3dnkdejwpcl9hj7kl1h3-0cybt1a7o5nj7vb97sqehzbo0 192.168.99.100:2377
+
+on default
+docker node ls
+docker node update --role manager node1
+docker swarm join-token manager
+
+on node2
+docker swarm join --token SWMTKN-1-3li4vru26e5v6wzhzyjz9a1l8z58bs3dnkdejwpcl9hj7kl1h3-2t36ajyn5my12pdctnvgvfk1d 192.168.99.100:2377
+
+on default
+docker node ls
+docker service create --replicas 3 alpine ping 8.8.8.8
+docker service ls
+docker node ps
+docker service ps gracious_mclean
+
+
