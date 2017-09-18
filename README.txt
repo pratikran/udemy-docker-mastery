@@ -1070,7 +1070,56 @@ RUN PRIVATE REGISTRY
     tree registry-data/
     
 ASSIGNMENT: Secure Docker Registry With TLS and Authentication    
+    Find this section in the following File in this repositry
+        Linked2ReadMeTXT.txt
+    
+    
+SWARM with DOCKER REGISTRY
+    No 'docker run' command
+      but
+        'docker service' command
+    
+    Setup test swarm
+        play-with-docker.com
+          click on 'rinch' icon 
+            use templates
+        docker node ls
+        docker service create --name registry --publish 5000:5000 registry
+        docker service ps registry
+        
+            clicking on port button
+                in the new tab url
+                    add /v2/_catalog
+                      see catalog of registries as output in browser
+        
+        docker pull hello-world
+        docker tag hello-world 127.0.0.1:5000/hello-world
+        docker push 127.0.0.1:5000/hello-world
+             
+            check the catalog of registries at url at location /v2/_catalog
+        
+        docker pull nginx
+        docker tag nginx 127.0.0.1:5000/nginx
+        docker push nginx 127.0.0.1:5000/nginx
+            check the catalog of registries at url at location /v2/_catalog
+                {"registries":["hello-world","nginx"]}
+        docker service create --name nginx -p 80:80 --replicas 5 --detach=false 127.0.0.1:5000/nginx
+        
+        Each Swarm node can pull image from some central registry, they cannot pull it from any other node itself.
+            registry accessible by all node is a must
+            
+ 
+ THIRD PARTY IMAGE REGISTRIES
+        Check the linked file in this repository
+          Linked2ReadMeTXT.txt
           
+ 
+        
+        
+        
+        
+    
+    
       
       
     
