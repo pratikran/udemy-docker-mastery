@@ -1019,7 +1019,9 @@ DOCKER IMAGE REGISTRY
       CVE - Common Vulnerability and exposure
           by Government of USA, HomeLand Security,
             done for all softwares
-            
+      See a quick how-to video on Swarms fleet management feature on YouTube.
+            https://youtu.be/VJmbCioYKGg
+      
       
       
       
