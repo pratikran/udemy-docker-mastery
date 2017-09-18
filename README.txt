@@ -842,6 +842,89 @@ STACK
   docker ps -a
   
   
+SWARM; SECRETS STORAGE
+    username/password
+    TLS certs/SSH keys
+    unshareables
+    
+    generic strings/binary content
+     >1.13 RAFT DB is encrypted on disk on manager nodes 
+    secrets - nit files but container in-memory fs, saved on swarm, assigned to services, then fetched by containers as needed
+    /run/secrets/<secret_name|secret_alias>
+    secrets are swarm specific and saved in its db
+    but for local dev workaround, docker-compose can use file based secrets, not secure
+    
+    cd ../secrets-sample-1
+    cat psql_user.txt
+    
+    SECRETS 
+    file based
+        docker secret create psql_user psql_user.txt
+        echo "mypassword" | docker secret create psql_pass - 
+        
+        security concerns
+          api called to remote using a file secret on local
+          root user profile file 
+          
+      docker secret inspect psql_user
+      docker service create --name psql --secret psql_user --secret psql_pass -e POSTGRES_PASSWORD_FILE=/run/secrets/psql_pass -e POSTGRES_USER_FILE=/run/secrets/psql_user postgres
+      docker service ps psql
+      docker ps -a
+      docker exec -it psql.1.7agr1prwca29qces8k5unrl27 bash
+        $# ls /run/secrets
+        $# cat psql_user; cat psql_pass
+        $# exit
+        
+      docker logs psql.1.7agr1prwca29qces8k5unrl27
+      docker service ps psql
+      docker service update --secret-rm
+        on this command it will recreate the container
+        
+    
+        secrets with swarm stacks
+            stack version > 3.1
+
+          cd ../secrets-sample-2
+          docker-compose.yml
+              secrets
+                file: or 
+                external:
+              then assign to containers in services
+          docker stack deploy -c docker-compose.yml mydb
+          docker secret ls
+          docker stack rm mydb
+    
+USING SECRETS WITH LOCAL DEV MACHINE
+  
+    cd ../secrets-sample-2
+    docker node demote efault
+    docker swarm leave
+    docker node rm default
+    docker info
+      Swarm: inactive
+    
+    docker-compose up -d
+        WINDOWS TOOLBOX
+        """"""""""""""""""""""""""""""""""""""""
+        ERROR: for secretssample2_psql_1  Cannot create container for service psql: invalid bind mount spec "F:\\Code\\devops\\udemy-bretfisher\\udemy-docker-mastery\\secrets-sample-2\\psql_user.txt:/run/secrets/psql_user:ro": invalid volume specification: 'F:\Code\devops\udemy-bretfisher\udemy-docker-mastery\secrets-sample-2\psql_user.txt:/run/secrets/psql_user:ro'
+        """"""""""""""""""""""""""""""""""""""""
+        debugging
+            docker-compose --verbose config
+            docker-compose version
+            docker version
+        docker-machine ssh default
+              install docker-compose
+              share f drive in virtualbox
+              cd to_path/secrets-sample-2/
+          docker-compose up -d
+          docker-compose exec psql cat /run/secrets/psql_user
+    docker-compose
+        secrets:
+          file:
+            this is for development
+          external:
+            use in production
+
 
    
     
