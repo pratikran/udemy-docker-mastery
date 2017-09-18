@@ -41,3 +41,84 @@ If you want a self-hosted option, there's Docker EE (https://www.docker.com/ente
 
 There's a much larger list of registries over at the Awesome Docker (https://github.com/veggiemonk/awesome-docker#hosting-images-registries) list.
 
+
+
+
+
+
+
+
+
+Bonus Lecture: Bret's DockerCon 2017 Video: "Journey to Docker Production"
+Section 8, Lecture 79
+
+YouTube video of my talk (https://www.youtube.com/watch?v=ZdUcKtg84T8) at DockerCon17 in Austin. My largest audience ever (1k maybe) so I was excited and nervous at first. It turned into a well received talk to a packed room of people ready to go production Docker. Lots of Q&A at the end.
+
+I talk about many of the decisions you need to make when taking your Docker containers from local dev/test to a production cluster. It covers decisions like:
+
+    What host OS should I use?
+    What base FROM images should I use?
+    How should my Swarm node design look?
+    What common issues do people have when starting a production docker project?
+    How to limit the project from trying to change too much at once.
+    How to speed up the project by outsourcing small pieces of solution to existing products.
+    How Docker's Enterprise/Cloud products can help.
+
+https://www.youtube.com/watch?v=ZdUcKtg84T8
+
+
+
+
+
+
+
+
+Bonus Lecture: Swarm Quorum and Recovery (Laura Frank from DockerCon 2017)
+Section 8, Lecture 80
+
+Also from DockerCon 2017, fellow Docker Captain and friend Laura Frank (https://twitter.com/rhein_wein) had a great session on the internals of Swarm Managers and how quorum of their Raft log works, called "Everything You Thought You Already Knew About Orchestration" (https://www.youtube.com/watch?v=Qsv-q8WbIZY). She goes into the math of how you always need an odd number of Managers, and what happens when one or more fail.
+
+She then shows various recovery options in case you "loose quorum" in your Swarm cluster. This video is demo heavy, so it's worth watching the whole thing!
+
+Watch on YouTube: https://www.youtube.com/watch?v=Qsv-q8WbIZY
+
+
+
+
+
+
+
+Bonus Lecture: Bret's Docker and DevOps Newsletter
+Section 8, Lecture 81
+
+I send out an email newsletter about once a week on new articles I've written, big news in the Docker ecosystem, and other things you might find useful around containers. You can signup at: 
+
+www.bretfisher.com/newsletter
+
+
+
+
+
+
+
+Bonus Lecture: Using Prune to Keep Your Docker System Clean (YouTube)
+Section 8, Lecture 82
+
+Docker has posted a short tip video (https://youtu.be/_4QzP7uwtvI) of me explaining the "prune" command in the docker cli and various ways you can use it. Enjoy!
+
+
+
+
+
+
+Bonus Lecture: What's New In Docker 17.06 (YouTube)
+Section 8, Lecture 83
+
+It's June of 2017, which means Docker 17.06 (stable) is out!  New features that were in the edge releases the last two months (17.04 and 17.05) are also rolled into this quarterly stable release.  Watch a YouTube video of Mano at Docker HQ giving an overview of the new features (https://www.youtube.com/watch?v=-NeaXUGEK_g).
+
+For a detailed list of changes, you can look through the Docker CE release notes on GitHub (https://github.com/docker/docker-ce/releases).
+
+
+
+
+
