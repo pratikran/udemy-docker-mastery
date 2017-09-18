@@ -951,6 +951,36 @@ ASSIGNMENT: CREATE SWARM STACK WITH SECRETS AND DEPLOY
    docker stack ps drupal
    
 FULL LIFECYCLE WITH COMPOSE
+    cd ../swarm-stack-3/
+    
+    Multiple docker compose file
+        https://docs.docker.com/compose/extends/#multiple-compose-files
+    Docker compose in production
+        https://docs.docker.com/compose/production/
+        
+    LOCAL DEV
+    docker-compose up -d
+    docker inspect swarmstack3-drupal-1
+        Mounts 
+    CI
+    docker-compose -f docker-compose.yml -f docker-compose.test.yml up -d
+          base yaml first, then test yaml
+    docker inspect swarmstack3-drupal-1
+          bind Mount not listed
+    PRODUCTION
+    docker-compose -f docker-compose.yml -f docker-compose.test.yml config > output.yml
+    
+    
+    docker-compose multiple file
+        extends keyword
+          removed in compose file >2.1
+            but could be added in later versions
+            
+
+
+DOCKER IMAGE REGISTRY
+    
+    
     
         
    
