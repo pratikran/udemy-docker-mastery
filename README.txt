@@ -1114,15 +1114,7 @@ SWARM with DOCKER REGISTRY
           Linked2ReadMeTXT.txt
           
  
+ BONUS LECTURES
+        Check the linked file in this repository
+          Linked2ReadMeTXT.txt
         
-        
-        
-        
-    
-    
-      
-      
-    
-    
-        
-   
