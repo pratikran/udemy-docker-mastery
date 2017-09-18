@@ -926,5 +926,31 @@ USING SECRETS WITH LOCAL DEV MACHINE
             use in production
 
 
+ASSIGNMENT: CREATE SWARM STACK WITH SECRETS AND DEPLOY
+  
+   cd ../compose-assignment-2
    
+   docker-compose.yml
+     swarm doesnt build
+        so, build key can be removed
+     POSTGRES_PASSWORD=password
+        to
+        POSTGRES_PASSWORD_FILE=/run/secrets/psql-pw
+     add
+        secrets sections
+          make external 
+   
+   echo "password1" | docker secret create psql-pw -
+   docker stack deploy -c docker-compose.yml drupal
+        ERROR: secrets Additional property secrets is not allowed
+        Windows 10 Home 64bit, Docker ToolBox, docker version 17.07.0-ce, docker-compose 1.15.0
+        
+        solution
+          docker-compose file version
+            changed to 3.1 from 3
+   docker stack ps drupal
+   
+FULL LIFECYCLE WITH COMPOSE
     
+        
+   
