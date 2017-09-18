@@ -1023,8 +1023,53 @@ DOCKER IMAGE REGISTRY
             https://youtu.be/VJmbCioYKGg
       
       
+DOCKER REGISTRY UNDERSTANDING
+    Configuration
+      https://docs.docker.com/registry/configuration/
+    Garbage Collection
+      https://docs.docker.com/registry/garbage-collection/
+    Mirror of DOcker HUb
+      https://docs.docker.com/registry/recipes/mirror/
       
-      
+    Private Registry
+    Part of Docker DIstribution on Github repo
+    Registry image on docker hub
+    basic auth, web api, no ui
+    api + storage
+    support storage loca, S3, GC, alibaba, Openstack swift
+    
+RUN PRIVATE REGISTRY
+    docker container run -d -p 5000:5000 --name registry registry
+    docker container ls
+    docker image ls
+    TAGS
+        docker Hub
+            <image name>:<version>
+        other registry
+            add host as well
+    docker pull hello-world
+    docker run hello-world
+    docker tag hello-world 127.0.0.1:5000/hello-world
+    docker image ls
+    docker push 127.0.0.1:5000/hello-world
+         hostIP tag will make it push it to local registry
+    docker image remove hello-world
+         removed local copy
+    docker image remove 127.0.0.1:5000/hello-world
+        remove referencing container first if it is running
+    docker image ls
+    docker pull 127.0.0.1:5000/hello-world
+    docker image ls
+    Recreate Registry with persistent volume
+        docker container kill registry
+        docker container rm registry
+    docker container run -d -p 5000:5000 --name registry -v $(pwd)/registry_data:/var/lib/registry registry
+    ls -la ./registry_data
+    docker push 127.0.0.1:5000/hello-world
+    ls -la ./registry_data
+    tree registry-data/
+    
+    
           
       
       
