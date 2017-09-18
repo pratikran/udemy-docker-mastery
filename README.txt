@@ -1069,8 +1069,7 @@ RUN PRIVATE REGISTRY
     ls -la ./registry_data
     tree registry-data/
     
-    
-    
+ASSIGNMENT: Secure Docker Registry With TLS and Authentication    
           
       
       
