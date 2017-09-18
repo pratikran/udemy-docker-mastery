@@ -979,7 +979,22 @@ FULL LIFECYCLE WITH COMPOSE
 
 
 DOCKER IMAGE REGISTRY
-    
+  https://hub.docker.com/
+  
+  docker hub
+  docker store
+  docker cloud
+  swarm connect to docker hub locally
+  build own registry
+  third party registries
+  
+  DOCKER HUB
+      public registry
+      registry + lightweight image building
+      bitbucket/github link to hub and build images
+      chaining image building
+      
+  
     
     
         
