@@ -994,7 +994,38 @@ DOCKER IMAGE REGISTRY
       bitbucket/github link to hub and build images
       chaining image building
       
+      
+      image building link/webhook
+          create > create automated build
   
+  DOCKER STORE
+      https://store.docker.com/
+      released summer 2016
+      Download docker software
+      reliable software from 3rd parties
+      like apple store
+        patnered software and could be premium too
+        
+  DOCKER CLOUD
+      CI/CD, Server Ops
+      Web Based DOcker Swarm Creation and Management
+      https://cloud.docker.com
+      
+      uses popular cloud hosts, also bring your own servers
+      automated image building, testing, deployment
+      advance than docker hub free jobs
+      private image security scan
+          on docker hub this is done on official images
+      CVE - Common Vulnerability and exposure
+          by Government of USA, HomeLand Security,
+            done for all softwares
+            
+      
+      
+      
+          
+      
+      
     
     
         
